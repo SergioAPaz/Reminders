@@ -1,0 +1,13 @@
+.navbar-default .navbar-nav > .active > a{
+    background-color: #222;
+}
+
+.navbar{
+    border: 1px solid #222;
+}
+
+.largo{
+    background-color:#222;
+ 
+  height: 250px;
+}
