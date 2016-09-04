@@ -1,3 +1,11 @@
+
+<?php
+include("backend/conexion.php");    
+$consulta=<<<SQL
+    SELECT id,Titulo,Descripcion,Hora,Minutos,Acciones FROM recordatorios
+SQL;
+$filas =mysqli_query($conexiondb,$consulta);
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,6 +13,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+
+  <link rel="stylesheet" href="assets/js/jquery/datatable jquery/dataTables.bootstrap.min.css">
         <link href="assets/css/panel.css" rel="stylesheet">
     </head>
 
@@ -30,7 +41,7 @@
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi cuenta <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
+                    <li><a href="profile.php">Mi perfil</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                     <li role="separator" class="divider"></li>
@@ -55,9 +66,9 @@
         <div class="panel-body">
             <p class="alert fondo456" style="font-size: 20px;background-color: #3F51B5;color: #ffffff"><span class="newarticle">Nuevo recordatorio</span><span style="color: transparent">.</span>
             </p>
-            <form role = "form" method="post" action="GuardRecord.php" >
+            <form role = "form" method="post" action="backend/GuardRecord.php" >
                 <div class = "form-group">
-                    <input type='text' name='txtgaleria' id='txtgaleria' hidden>
+                  
                     <label class="text-muted" for = "name">Titulo del recordatorio:</label>
                     <input type="text" name="txttitulo" class="form-control" placeholder="Titulo..." maxlength="200"  pattern="^\s*[a-zA-Z0-9ñÑ-_.,\s]+\s*" required>
                     <br/>
@@ -69,8 +80,15 @@
                 <div class="form-inline">
                     <div class="form-group">
             
-                        <input type="number" name="txthora" class="form-control" id="exampleInputEmail3" placeholder="Hora">
+                        <input type="number" name="txthora" min="0" max="23"  class="form-control" id="exampleInputEmail3" placeholder="Hora">
                     </div>
+
+
+          <div class="form-group">
+            
+                         <label class="text-muted" for ="name" style="margin-right: 10px;margin-top: 5px">HRS.</label>
+                    </div>
+
                     <div class="form-group">
                         
                         <input type="number" name="txtminutos" class="form-control" id="exampleInputPassword3" placeholder="Minutos">
@@ -92,6 +110,7 @@
                 <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
                     <thead>
                         <tr style="background-color: #F5F5F5">
+                         <th style="font-size: 14px;color: #F57C00">#</th>
                             <th style="font-size: 14px;color: #F57C00">Recordatorio</th>
                             <th style="font-size: 14px;color: #F57C00">Descripcion</th>
                             <th style="font-size: 14px;color: #F57C00">Hora</th>
@@ -100,6 +119,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                      <?php
+                    $count=0;
+                    while ($columna=mysqli_fetch_assoc($filas))
+                    {
+                        $count=$count+1;
+                        echo "<tr>";
+                        echo "<td>$count</td>";
+                        echo "<td>$columna[Titulo]</td>";
+                        echo "<td>$columna[Descripcion]</td>";
+                        echo "<td>$columna[Hora]</td>";
+                        echo "<td>$columna[Minutos]</td>";
+                        echo "<td>
+                        <a href='PHPCatalogo/BorrarGaleria?id=$columna[id]'>Borrar</a>
+                        <a href='EditarGaleria?id=$columna[id]'>Editar</a>
+                        <a href='AdminImagen?id=$columna[id]'>Cambiar imagen</a></td>";
+                        echo "</tr>";
+                    }
+                    ?>
                     </tbody>
                 </table>
             </div>
@@ -123,5 +160,8 @@
     <!-- Bootstrap Core JavaScript -->
   <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
  <script src="assets/js/panel.js"></script>
+
+    <script src="assets/js/jquery/datatable jquery/jquery.dataTables.min.js"></script>
+    <script src="assets/js/jquery/datatable jquery/dataTables.bootstrap.min.js"></script>
     </body>
 </html>
