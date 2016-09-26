@@ -13,13 +13,11 @@ $filas =mysqli_query($conexiondb,$consulta);
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        
-
-  <link rel="stylesheet" href="assets/js/jquery/datatable jquery/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="assets/js/jquery/datatable jquery/dataTables.bootstrap.min.css">
         <link href="assets/css/panel.css" rel="stylesheet">
     </head>
 
-<body style="background-color: #424242">
+<body style="background-color: #424242;line-height:1.4">
     <header style="position: relative">
     <!-- Static navbar -->
         <nav class="navbar navbar-default navbar-static-top" style="position: fixed;min-width: 100%;box-shadow: 0px 7px 7px rgba(0,0,0,0.5);background-color: #222">
@@ -31,11 +29,11 @@ $filas =mysqli_query($conexiondb,$consulta);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img class="navbar-brand" src="img/r.jpg" alt="">
+            <img class="navbar-brand" class="img-circle" style="background-color: #333333" src="img/g.png" alt="">
             </div>
             <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Panel</a></li>
+                <li class="active"><a href="index.php">Administrador</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -50,7 +48,7 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <li><a href="#">One more separated link</a></li>
                 </ul>
                 </li>
-                <li><a href="../navbar-fixed-top/">About</a></li>
+                <li><a href="../navbar-fixed-top/">Acerca de</a></li>
             </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -110,12 +108,12 @@ $filas =mysqli_query($conexiondb,$consulta);
                 <table class="table  table-bordered table-hover table-condensed tab" id="regTable"  style="background-color: #ffffff;text-align: center;vertical-align: middle;">
                     <thead>
                         <tr style="background-color: #F5F5F5">
-                         <th style="font-size: 14px;color: #F57C00">#</th>
-                            <th style="font-size: 14px;color: #F57C00">Recordatorio</th>
-                            <th style="font-size: 14px;color: #F57C00">Descripcion</th>
-                            <th style="font-size: 14px;color: #F57C00">Hora</th>
-                            <th style="font-size: 14px;color: #F57C00">Minutos</th>
-                            <th style="font-size: 14px;color: #F57C00">Acciones</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">#</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">Recordatorio</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">Descripcion</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">Hora</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">Minutos</th>
+                            <th style="font-size: 14px;color: #F57C00;text-align: center">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
