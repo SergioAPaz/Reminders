@@ -43,9 +43,9 @@ $filas =mysqli_query($conexiondb,$consulta);
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                     <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li class="dropdown-header">Sesion</li>
+                    <li><a href="backend/CerrarSesion.php">Cerrar sesion</a></li>
+                   
                 </ul>
                 </li>
                 <li><a href="../navbar-fixed-top/">Acerca de</a></li>
