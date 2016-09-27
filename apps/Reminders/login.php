@@ -22,7 +22,7 @@
 
                         <div class="row">
                             <div class="col-xs-6">
-                                <a href="#" class="active" id="login-form-link">Iniciar kraken sesión</a>
+                                <a href="#" class="active" id="login-form-link">Iniciar sesión</a>
                             </div>
                             <div class="col-xs-6">
                                 <a href="#" id="register-form-link">Registrate</a>
