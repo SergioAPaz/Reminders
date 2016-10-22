@@ -25,6 +25,7 @@ if(isset($_POST['g-recaptcha-response'])  &&  $_POST['g-recaptcha-response'])
                 /*Validacion con expresiones reulares*/
                 if ((preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $usr)) && (preg_match("/^[a-zA-Z0-9._ñÑ ]*$/", $psw))) 
                 {
+                      
                     $con = mysqli_connect($host, $user, $pw) or die ("Problemas con el servidor de la base de datos.");
                     mysqli_select_db($con, $db);
                     $sqlCommand = "SELECT Username,password FROM reminders_users WHERE Username='$usr'";
@@ -36,6 +37,7 @@ if(isset($_POST['g-recaptcha-response'])  &&  $_POST['g-recaptcha-response'])
                         $_SESSION['username'] = $_POST['user'];
                         $_SESSION["username"] = "SI";
                         $_SESSION['usuario'] = $_POST['user'];
+                      
                         header("location:../index.php");
                     } else {
                         echo "<!DOCTYPE html>";

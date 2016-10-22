@@ -56,10 +56,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">GitHub</a>
+                        <a class="page-scroll" href="https://github.com/sergioapaz" target="_blank">My Projects</a>
                     </li>
                     <li>
-                        <a  class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a  class="page-scroll" href="#portfolio">News</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -114,25 +114,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 style="color: #FAFAFA" class="section-heading">ENTRADAS</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 style="color: #FAFAFA" class="section-heading">Noticias</h2>
+                    <h3 class="section-subheading text-muted">Las noticias mas reelevantes acerca de tecnologia.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+
+
+                 <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img  src="img/body/linuxwindows.jpg"  class="img-responsive" alt="">
+                        <img src="img/7.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h5 style="margin-top: -3px">Falso arranque rapido</h5>
-                        <p style="font-size: 14px" class="text-muted">Windows 10</p>
+                        <h4>PHP 7</h4>
+                        <p class="text-muted">¿Estas listo para php7?</p>
                     </div>
                 </div>
+
+
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -484,9 +488,9 @@ read-only with the 'ro' mount option.
     </div>
 
     <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" >
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" style="background-color: #222; color: #fafafa">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
                         <div class="rl">
@@ -495,14 +499,43 @@ read-only with the 'ro' mount option.
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
+                        <div class="col-lg-8 col-lg-offset-2" >
                             <div class="modal-body">
-                                <h2>Project Heading</h2>
-                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                                <h2>Estas listo para PHP 7</h2><br><br>
+                                
+                                <img class="img-responsive img-centered" src="img/php7big.jpg" alt=""><br>
+                                <p>PHP7 tiene muchas mejoras en el lenguaje que hacen que tu código sea mucho más eficiente y limpio, sin embargo no todas las aplicaciones están listas para dar el gran paso en la versión por eso te recomendamos hacer una verificación primero antes de intentar cualquier migración. <br><br>PHPCompatibility es parte de los sniff para PHP_CodeSniffer que te permite verificar la compatibilidad de tu código PHP. La herramienta te permite validar si tu aplicación es compatible con versiones desde la versión 5 hasta la última liberada.<br><br>Puedes instalarla con composer simplemente agregando la librería en la sección "require-dev" y luego corriendo el comando update.<br>
+                                <div style="width:60%;height: auto;background-color: #fafafa;color: #222;margin: 0 auto;border-radius: 10px">
+                                    "require-dev": { <br>
+    "squizlabs/php_codesniffer": "*", <br>
+    "wimg/php-compatibility": "*", <br>
+    "simplyadmire/composer-plugins" : "@dev",<br> 
+    "prefer-stable" : true <br>
+}
+                                </div>
+                                <br>
+                                <p>Puedes agregar opciones de configuración especifica para tu proyecto mediante un archivo xml.</p>
+                                <div style="width:70%;height: auto;background-color: #fafafa;color: #222;margin: 0 auto;border-radius: 50px">
+                                   <p><pre>
+&lt;?xml version="1.0"?&gt; 
+&lt;ruleset name="Custom ruleset"&gt;
+&lt;description&gt; My rules for PHP_CodeSniffer&lt;/description&gt; 
+&lt;!-- Run against the PHPCompatibility ruleset --&gt; 
+&lt;rule ref="PHPCompatibility" /&gt; 
+&lt;!-- Run against a second ruleset --&gt; 
+&lt;rule ref="PSR2" /&gt; 
+&lt;/ruleset&gt;
+                                       </pre> </p>
+
+                                </div>
+                                </p>
+
+                                <p>Puedes ver todas las opciones disponibles y el resto de la configuración en el sitio web.<br>
+
+Una herramienta muy útil para los desarrolladores de php que quieren actualizar sus proyectos y pasarlos a la nueva versión del lenguaje.</p>
+
+<p>Fuente: <span style="color: #c5eb2c">www.webbizarro.com</span> Thank you!</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i>Cerrar</button>
                             </div>
                         </div>
                     </div>
