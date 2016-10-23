@@ -682,7 +682,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     box-shadow: none;
     border: none;
     min-height: 100%;
-    padding: 100px 0;
+    /*padding: 100px 0;*/
     text-align: center
 }
 

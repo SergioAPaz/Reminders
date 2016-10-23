@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="assets/css/profile.css">
@@ -57,10 +57,10 @@
 					<h1 style="color: #337ab7" class="title">Mi perfil</h1>
 					<hr />
 				</div>
-			</div> 
+			</div>
 			<div class="main-login main-center">
 				<form class="form-horizontal" method="post" action="#">
-					
+
 					<div class="form-group">
 						<label for="name" class="cols-sm-2 control-label">Your Name</label>
 						<div class="cols-sm-10">
@@ -101,18 +101,18 @@
 						</div>
 					</div>
 
-					
+
 
 					<div class="form-group ">
 						<button type="button" class="btn btn-primary btn-lg btn-block login-button">Guardar cambios</button>
 					</div>
-					
+
 				</form>
 			</div>
 		</div>
 	</div>
 
-	<script src="../../vendor/jquery/jquery.min.js"></script> 
+	<script src="../../vendor/jquery/jquery.min.js"></script>
 	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
